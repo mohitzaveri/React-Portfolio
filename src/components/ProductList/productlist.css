@@ -1,0 +1,159 @@
+.pl {
+  padding: 80px 0;
+  background-color: #f0f4f8;
+  /* Light blue background */
+}
+
+.pl-title {
+  font-size: 48px;
+  color: #183153;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pl-desc {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.pl-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pl-item {
+  display: flex;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  /* White card background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pl-item:hover {
+  transform: translateY(-5px);
+}
+
+.pl-item-left {
+  flex-direction: row;
+}
+
+.pl-item-right {
+  flex-direction: row-reverse;
+}
+
+.pl-item-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pl-item-title {
+  font-size: 28px;
+  color: #183153;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.pl-item-desc {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.pl-item-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pl-item-features li {
+  font-size: 14px;
+  color: #1e86d6;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pl-item-features li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #1e86d6;
+}
+
+.pl-item-link {
+  display: inline-block;
+  background-color: #1e86d6;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.pl-item-link:hover {
+  background-color: #1565c0;
+}
+
+.pl-item-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.pl-item-image img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .pl-item {
+    flex-direction: column;
+  }
+
+  .pl-item-content,
+  .pl-item-image {
+    width: 100%;
+  }
+
+  .pl-item-image {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pl-title {
+    font-size: 36px;
+  }
+
+  .pl-desc {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .pl-item-content {
+    padding: 30px;
+  }
+
+  .pl-item-title {
+    font-size: 24px;
+  }
+}

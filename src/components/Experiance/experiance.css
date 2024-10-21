@@ -1,0 +1,205 @@
+.experience {
+    background-color: #f0f4f8;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1e86d6, #183153);
+}
+
+.experience-title {
+    font-size: 42px;
+    color: #183153;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.experience-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #1e86d6;
+    margin: 15px auto 0;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.education-section,
+.work-experience-section {
+    width: 48%;
+    position: relative;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #1e86d6;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1e86d6, transparent);
+}
+
+.section-icon {
+    margin-right: 15px;
+    font-size: 28px;
+}
+
+.education-item,
+.work-experience-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-item::before,
+.work-experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #1e86d6;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover,
+.work-experience-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.education-item:hover::before,
+.work-experience-item:hover::before {
+    transform: scaleY(1);
+}
+
+.degree,
+.job-title {
+    font-size: 22px;
+    color: #183153;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.institution,
+.company-info,
+.period {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    margin-right: 10px;
+    color: #1e86d6;
+    font-size: 16px;
+}
+
+.highlights {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.highlights li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.highlight-icon {
+    color: #1e86d6;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+@media (max-width: 992px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .education-section,
+    .work-experience-section {
+        width: 100%;
+    }
+
+    .education-section {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 80px 0;
+    }
+
+    .experience-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .degree,
+    .job-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .education-item,
+    .work-experience-item {
+        padding: 20px;
+    }
+}

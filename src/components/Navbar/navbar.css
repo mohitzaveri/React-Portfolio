@@ -1,0 +1,76 @@
+.navbar {
+    z-index: 1000;
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #183153;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    color: #1e86d6;
+    font-weight: 600;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    color: #0a4a8a;
+    background-color: rgba(30, 134, 214, 0.1);
+    border-radius: 4px;
+}
+
+.navbar-toggle,
+.navbar-close {
+    display: none;
+    cursor: pointer;
+    color: #1e86d6;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        right: -300px;
+        width: 70%;
+        top: 0;
+        height: 100vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.3s ease-out;
+    }
+
+    .nav-list.show {
+        right: 0;
+    }
+
+    .navbar-close {
+        display: block;
+        font-size: 30px;
+        margin: 20px;
+    }
+}
+
+/* Remove the ::after pseudo-element entirely */
+.navbar::after {
+    display: none;
+}
