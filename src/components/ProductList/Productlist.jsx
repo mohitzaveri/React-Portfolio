@@ -2,6 +2,7 @@ import React from "react";
 import "./productlist.css";
 import Product from "../Product/Product";
 import Portfolio from "../../images/Home.png";
+import Jobify from "../../images/LandingPage.png";
 
 const projects = [
   {
@@ -16,6 +17,14 @@ const projects = [
     ],
     image: Portfolio,
     repo: "https://github.com/mohitzaveri/React-Portfolio",
+  },
+  {
+    title: "Jobify",
+    description:
+      "Created a full-stack social network web application using React, Redux, Node.js, Express, and MongoDB,implementing a robust backend API and JWT authentication for secured user routes",
+    features: ["React-based", "JWT", "Session", "Login Autentication"],
+    image: Jobify,
+    repo: "https://github.com/mohitzaveri/JobTrackr",
   },
 ];
 
